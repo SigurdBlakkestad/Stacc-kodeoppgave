@@ -2,7 +2,9 @@
 
 ## Oppgavebeskrivelse
 Her kan beskrive hvilke oppgave(r) du har valgt å løse.
-Jeg er ikke noe kjent med hverken API eller webapp, men velger å starte med å prøve å implementere API'et. her er tanken og prøve ut nodejs, og hvis det blir litt tid til webappen skal jeg prøve å løse det med react. 
+Jeg er ikke noe kjent med hverken API eller webapp, men velger å starte med å prøve å implementere API'et. Her er tanken og prøve ut nodejs, og hvis det blir litt tid til webappen skal jeg prøve å løse det med react. 
+
+Jeg "løste" oppgaven ved å lage et API ved nodejs, og en webapp med react som klarer å samhandle sammen. Jeg har ikke fått inn pep.csv filen, eller fått til en skikkelig søkemotor.
 
 ## Hvordan kjøre prosjektet
 prosjektet kan du finne på heroku her: https://stacc-kodeoppgave-22-sb.herokuapp.com/
