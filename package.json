@@ -1,0 +1,23 @@
+{
+  "name": "stacc-kodeoppgave",
+  "version": "1.0.0",
+  "description": "Her kan beskrive hvilke oppgave(r) du har valgt å løse.\r Jeg er ikke noe kjent med hverken API eller webapp, men velger å starte med å prøve å implementere API'et. her er tanken og prøve ut nodejs, og hvis det blir litt tid til webappen skal jeg prøve å løse det med react.",
+  "main": "API.js",
+  "scripts": {
+    "start": "node server/API.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SigurdBlakkestad/Stacc-kodeoppgave.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SigurdBlakkestad/Stacc-kodeoppgave/issues"
+  },
+  "homepage": "https://github.com/SigurdBlakkestad/Stacc-kodeoppgave#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
