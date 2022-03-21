@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <input placeholder="Enter Post Title"/>
         <p>{!data ? "Loading..." : data}</p>
+        <input placeholder="Skriv inn et navn her"/>
       </header>
     </div>
   );

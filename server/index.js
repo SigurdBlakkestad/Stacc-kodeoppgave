@@ -3,7 +3,7 @@
 const path = require('path');
 const express = require("express");
 const fs = require('fs'); 
-const parse = require('csv-parse');
+//const csv = require('csv-parse');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 app.get("/api", (req, res) => {
-    res.json({ message: "ta en pep sjekk da vell!" });
+    res.json({ message: "Ta en pep sjekk da vell!" });
 });
 
 app.get('*', (req, res) => {
@@ -24,4 +24,4 @@ app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
 
-//dette kan kjøres ved å skrive dette i din valgte nettleser: http://localhost:3001/api
+//dette kan kjøres ved å skrive dette i din valgte nettleser: http://localhost:3001/api eller på 
