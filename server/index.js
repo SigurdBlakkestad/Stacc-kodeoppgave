@@ -24,4 +24,4 @@ app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
 
-//dette kan kjøres ved å skrive dette i din valgte nettleser: http://localhost:3001/api eller på 
+//dette kan kjøres ved å skrive dette i din valgte nettleser: http://localhost:3001/api eller på https://stacc-kodeoppgave-22-sb.herokuapp.com/
