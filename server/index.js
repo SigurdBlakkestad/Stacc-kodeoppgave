@@ -11,7 +11,7 @@ app.use(express.static(path.resolve(__dirname, '../webapp/build')));
 
 
 app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
+    res.json({ message: "ta en pep sjekk da vell!" });
 });
 
 app.get('*', (req, res) => {
