@@ -2,9 +2,13 @@
   "name": "stacc-kodeoppgave",
   "version": "1.0.0",
   "description": "Her kan beskrive hvilke oppgave(r) du har valgt å løse.\r Jeg er ikke noe kjent med hverken API eller webapp, men velger å starte med å prøve å implementere API'et. her er tanken og prøve ut nodejs, og hvis det blir litt tid til webappen skal jeg prøve å løse det med react.",
-  "main": "API.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/API.js"
+    "start": "node server/index.js",
+    "build": "cd webapp && npm install && npm run build"
+  },
+  "engines": {
+    "node": "v16.14.2"
   },
   "repository": {
     "type": "git",
