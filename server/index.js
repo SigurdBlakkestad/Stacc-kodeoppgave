@@ -19,21 +19,26 @@ app.get('/api/pep', (req, res) => {
     const name = req.query.name;
     var numberOfHits = 0;
     var results = [];
+    var details = [];
 
     fs.createReadStream(path.resolve(__dirname, 'pep.csv'))
     .pipe(csv())
     .on('data', (row) => {
       if(typeof row.name != 'undefined' && row.name.toLowerCase() == name.toLowerCase()){
         numberOfHits++;
-        results.push(row);
+        results.push(row.name);
+        details.push(row);
+        console.log(details[0].schema)
       }
     }).on('end', () => {
       res.status(200).send({
         "numberOfHits": numberOfHits,
-        "results": results
+        "results": results,
+        "details" : details
       });
     });
 });
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../webapp/build', 'index.html'));

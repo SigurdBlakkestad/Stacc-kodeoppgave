@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+//import Search from './components/Search'
+
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -12,9 +14,20 @@ function App() {
     .then((data) => setData(data));
   }
 
+
   var userInput = React.createRef();
 
-  const handleClick = () => { searchPerson(userInput.current.value); }
+  const [test, setTest] = React.useState(null);
+  //const handleClick = () => { searchPerson(userInput.current.value); }
+  var dit = [];
+  const showDetails = (details) => {
+    dit.push(data.details[0].birth_date)
+    dit.push(data.details[0].countries)
+    dit.push(data.details[0].dataset)
+    console.log(data.details[0].birth_date)
+    console.log(dit)
+    console.log(dit.length)  
+  }
 
   return (
     <div className="App">
@@ -23,11 +36,13 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>
         <input ref={userInput}></input>
-        <button onClick={handleClick}>Search</button>
+        <button onClick={() => searchPerson(userInput.current.value)}>Search</button>
         </div>
         <div>
         <p>{!data ? "": "Number of results: " + data.numberOfHits}</p>
-        <p>{!data ? "": !data.numberOfHits ? "No match found" : data.results[0].name + " is a politically exposed person"}</p>
+        <p>{!data ? "": !data.numberOfHits ? "No match found" : data.results + " is a politically exposed person"}</p>
+        <p>{!data ? "": !data.numberOfHits ? "" : <button onClick={() => setTest('Born: ' + data.details[0].birth_date +' Country ' + data.details[0].countries + ' from dataset ' + data.details[0].dataset )} >Show details</button>}</p>
+        <p>{!test ? "": test}</p>
         </div>
       </header>
     </div>
