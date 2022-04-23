@@ -23,10 +23,7 @@ function App() {
   const showDetails = (details) => {
     dit.push(data.details[0].birth_date)
     dit.push(data.details[0].countries)
-    dit.push(data.details[0].dataset)
-    console.log(data.details[0].birth_date)
-    console.log(dit)
-    console.log(dit.length)  
+    dit.push(data.details[0].dataset) 
   }
 
   return (
