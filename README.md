@@ -9,12 +9,12 @@ Jeg "løste" oppgaven ved å lage et API ved nodejs, og en webapp med react som 
 ## Hvordan kjøre prosjektet
 prosjektet kan du finne på heroku her: https://stacc-kodeoppgave-22-sb.herokuapp.com/
 
-og ved å først gå i api'et og kjøre:
+og ved å først åpne en terminal og kjøre:
 npm start
 
-for å videre navigere deg inn i webapp og gjøre det samme:
+for å så åpne en ny terminal og navigere deg inn i webapp og bygge appen, kommandoene er:
 cd webapp
-npm start
+npm run build
 
 ## Kommentarer
 Noen spesielle valg du ønsker å beskrive/forsvare?
