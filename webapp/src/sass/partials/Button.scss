@@ -1,0 +1,10 @@
+@mixin button {
+    padding: 0.75rem 2rem;
+    color: #fff;
+    background: cadetblue;
+  }
+  
+  // And use it like this
+  .navbar__button {
+    @include button;
+  }
