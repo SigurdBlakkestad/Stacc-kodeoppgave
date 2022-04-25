@@ -1,10 +1,11 @@
 # Stacc code challenge 2022
 
 ## Oppgavebeskrivelse
-Her kan beskrive hvilke oppgave(r) du har valgt å løse. <br />
+Her kan beskrive hvilke oppgave(r) du har valgt å løse.
+
 Jeg er ikke noe kjent med hverken API eller webapp, men velger å starte med å prøve å implementere API'et. Her er tanken og prøve ut nodejs, og hvis det blir litt tid til webappen skal jeg prøve å løse det med react. 
 
-Jeg oppgaven ved å lage et API ved nodejs, og en webapp med react som klarer å samhandle sammen. Jeg har ikke fått inn pep.csv filen, eller fått til en skikkelig søkemotor.
+Jeg løste oppgaven ved å lage et API ved nodejs, og en webapp med react som klarer å samhandle sammen.
 
 ## Hvordan kjøre prosjektet
 Prosjektet er deployert på heroku, men blir ikke oppdatert lenger. Heroku jobber med å sikre at man kan koble seg til på en bedre måte så inntil da må prosjektet kjøres lokalt.
@@ -20,5 +21,4 @@ npm run build
 
 ## Kommentarer
 Noen spesielle valg du ønsker å beskrive/forsvare?
-Jeg har aldri brukt nodejs, react eller heroku før så alt ser nok ikke så veldig pent ut, og jeg har ikke fått brukt en brøkdel av tiden
-jeg egentlig ønsket å bruke på prosjektet. Det er veldig forståelig om dette ikke er nok til å bli med videre i intervjuprossesen heller.
+Jeg har aldri brukt nodejs, react eller heroku før så alt ser nok ikke så veldig pent ut.
