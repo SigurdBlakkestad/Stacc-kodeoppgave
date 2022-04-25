@@ -18,7 +18,6 @@ function App() {
   }
 
   var userInput = React.createRef();
-  //<img src={logo} className="App-logo" alt="logo" />
   return (
     <div className="App" align='center'>
       <header className="App-header">
@@ -28,7 +27,7 @@ function App() {
         <button onClick={() => searchPerson(userInput.current.value)}>Search</button>
         </div>
         <div>
-        <p>{!data ? "": !data.numberOfHits ? "No match found" : data.results + " is a politically exposed person"}</p>
+        <p>{!data ? "": !data.numberOfHits ? 'No match found' : data.results + " is a politically exposed person"}</p>
         <p>{!data ? "": !data.numberOfHits ? "" : <button onClick={() => setDetails('Born: ' + data.details[0].birth_date +', Country: ' + data.details[0].countries.toUpperCase() + ', From dataset: ' + data.details[0].dataset )} >Show details</button>}</p>
         <p>{!details ? "": !data.numberOfHits ? "" : details}</p>
         </div>

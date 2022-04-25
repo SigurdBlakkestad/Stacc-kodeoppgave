@@ -28,7 +28,7 @@ app.get('/api/pep', (req, res) => {
         numberOfHits++;
         results.push(row.name);
         details.push(row);
-      }
+      } 
     }).on('end', () => {
       res.status(200).send({
         "numberOfHits": numberOfHits,
