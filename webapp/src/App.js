@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './pep.png';
 //import './App.css';
 //import './Header.scss';
-import './sass/Style.scss';
+import './sass/style.scss';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   var userInput = React.createRef();
   //<img src={logo} className="App-logo" alt="logo" />
   return (
-    <div className="App">
+    <div className="App" align='center'>
       <header className="App-header">
       <h1>Search for politically exposed people</h1>
         <div>

@@ -7,7 +7,9 @@ Jeg er ikke noe kjent med hverken API eller webapp, men velger å starte med å 
 Jeg "løste" oppgaven ved å lage et API ved nodejs, og en webapp med react som klarer å samhandle sammen. Jeg har ikke fått inn pep.csv filen, eller fått til en skikkelig søkemotor.
 
 ## Hvordan kjøre prosjektet
-prosjektet kan du finne på heroku her: https://stacc-kodeoppgave-22-sb.herokuapp.com/
+Prosjektet er deployert på heroku, men blir ikke oppdatert lenger. Heroku jobber med å sikre at man kan koble seg til på en bedre måte så inntil da må prosjektet kjøres lokalt.
+
+Prosjektet kan du finne på heroku her: https://stacc-kodeoppgave-22-sb.herokuapp.com/
 
 og ved å først åpne en terminal og kjøre:
 npm start
