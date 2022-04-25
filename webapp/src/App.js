@@ -19,39 +19,48 @@ function App() {
   async function searchOrg(org){
     setHits(null)
     setDetails(null)
-    var res = await fetch(`https://data.brreg.no/enhetsregisteret/api/enheter/${org}/roller`);
-    res = await res.json();
-    var persons = [];
-
-    for(var gruppe = 0; gruppe < 2; gruppe++){
-      for(var person in res.rollegrupper[gruppe].roller){
-        var navn = res.rollegrupper[gruppe].roller[person].person.navn;
-        var navnString = '';
-        navnString += navn.fornavn;
-
-        if(navn.mellomnavn != undefined){
-          navnString+= navn.mellomnavn;
-        }
-
-        navnString += ' ' + navn.etternavn;
-        persons.push(navnString);
-      }
-    }
-
-    var hits = [];
-
-    for(var person in persons){
-      let url = "/api/pep?name=" + persons[person];
-      var res = await fetch(url);
+    org = org.replace(/ /g,'');
+    var length = /^\d{9}$/;
+    if(org.match(length)){
+      var res = await fetch(`https://data.brreg.no/enhetsregisteret/api/enheter/${org}/roller`);
       res = await res.json();
-      
-      if(res.numberOfHits != 0){
-        hits.push(res.results);
-      }
-    }
+      var persons = [];
 
-    setHits(hits);
-    console.log(hits);
+      for(var gruppe = 0; gruppe < 2; gruppe++){
+        for(var person in res.rollegrupper[gruppe].roller){
+          var navn = res.rollegrupper[gruppe].roller[person].person.navn;
+          var navnString = '';
+          navnString += navn.fornavn;
+
+          if(navn.mellomnavn != undefined){
+            navnString+= navn.mellomnavn;
+          }
+
+          navnString += ' ' + navn.etternavn;
+          persons.push(navnString);
+        }
+      }
+
+      var hits = [];
+
+      for(var person in persons){
+        let url = "/api/pep?name=" + persons[person];
+        var res = await fetch(url);
+        res = await res.json();
+        
+        if(res.numberOfHits != 0){
+          hits.push(res.results + ', ');
+        }
+      }
+
+      if (hits && !hits.length) {
+        setHits('No match found')
+      } else{
+        setHits('These are politically exposed: ' + hits);
+      }
+    }else{
+      setHits('Org. number must be of length 9');  
+    }  
   }
 
   var userInput = React.createRef();
@@ -76,7 +85,7 @@ function App() {
         <button onClick={() => searchOrg(userInput.current.value)}>Search</button>
         </div>
         <div>
-        <p>{!hits ? "": 'These are politically exposed: ' + hits}</p>
+        <p>{!hits ? "": hits}</p>
         </div>
       </header>
     </div>
