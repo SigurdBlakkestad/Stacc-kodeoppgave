@@ -28,7 +28,6 @@ app.get('/api/pep', (req, res) => {
         numberOfHits++;
         results.push(row.name);
         details.push(row);
-        console.log(row.name);
       } 
     }).on('end', () => {
       res.status(200).send({
