@@ -54,7 +54,7 @@ function App() {
       }
 
       if (hits && !hits.length) {
-        setHits('No match found')
+        setHits('No match found');
       } else{
         setHits('These are politically exposed: ' + hits);
       }
@@ -64,6 +64,7 @@ function App() {
   }
 
   var userInput = React.createRef();
+  var orgInput = React.createRef();
 
   return (
     <div className="App" align='center'>
@@ -72,7 +73,7 @@ function App() {
         <div>
         <h2>Search to see if a person is politically exposed</h2>
         <input ref={userInput} />
-        <button placeholder='Org. nummer' onClick={() => searchPerson(userInput.current.value)}>Search</button>
+        <button onClick={() => searchPerson(userInput.current.value)}>Search</button>
         </div>
         <div>
         <p>{!data ? "": !data.numberOfHits ? 'No match found' : data.results + " is a politically exposed person"}</p>
@@ -81,8 +82,8 @@ function App() {
         </div>
         <div>
         <h2>Search to see if the leaders in a company person is politically exposed</h2>
-        <input ref={userInput} />
-        <button onClick={() => searchOrg(userInput.current.value)}>Search</button>
+        <input ref={orgInput} />
+        <button onClick={() => searchOrg(orgInput.current.value)}>Search</button>
         </div>
         <div>
         <p>{!hits ? "": hits}</p>
