@@ -16,9 +16,8 @@ og ved å først åpne en terminal og kjøre:
 
 npm start
 
-for å så åpne en ny terminal og navigere deg inn i webapp og bygge appen, kommandoene er:
+for å så åpne en ny terminal og bygge appen, kommandoen er:
 
-cd webapp
 npm run build
 
 ## Kommentarer
